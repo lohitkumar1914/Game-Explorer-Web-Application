@@ -3,7 +3,7 @@ import { SimpleGrid, Text } from '@chakra-ui/react';
 import usegames from '../hooks/usegame';
 import GameCard from './GameCard';
 import GameCardSkeleton from './GameCardSkeleton';
-import GameCardContainer from './gameCardContainer';
+import GameCardContainer from './GameCardContainer';
 
 const GameGrid = () => {
     const{games,error,isLoading}=usegames();
