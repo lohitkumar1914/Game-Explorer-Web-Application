@@ -4,7 +4,7 @@ import{SiNintendo}  from 'react-icons/si'
 import{BsGlobe}  from 'react-icons/bs'
 
 import { HStack, Icon } from '@chakra-ui/react'
-import { Platform } from '../hooks/usegame'
+import { Platform } from '../hooks/useGames'
 import { IconType } from 'react-icons'
 
 interface Props{
@@ -21,9 +21,7 @@ const PlatformIconList = ({platforms}:Props) => {
         ios:MdPhoneIphone,
         web:BsGlobe,
         android:FaAndroid
-
-
-    }
+    } 
   return (
     
  <HStack marginY={1}> 

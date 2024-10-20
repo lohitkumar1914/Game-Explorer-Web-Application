@@ -1,4 +1,4 @@
-import useData from "./UseDate";
+import useData from "./useData";
 
 export interface Genre{
     id:number;
