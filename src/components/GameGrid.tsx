@@ -1,34 +1,40 @@
+import { SimpleGrid, Text } from "@chakra-ui/react";
+import usegames, { Platform } from "../hooks/useGames";
+import GameCard from "./GameCard";
+import GameCardSkeleton from "./GameCardSkeleton";
+import GameCardContainer from "./GameCardContainer";
+import { Genre } from "../hooks/useGenres";
+import { GameQuery } from "../App";
 
-import { SimpleGrid, Text } from '@chakra-ui/react';
-import usegames, { Platform } from '../hooks/useGames';
-import GameCard from './GameCard';
-import GameCardSkeleton from './GameCardSkeleton';
-import GameCardContainer from './GameCardContainer';
-import { Genre } from '../hooks/useGenres';
-
-
-interface Props{
-  selectedGenre: Genre|null;
-  selectedPlatform:Platform | null;
+interface Props {
+  gameQuery: GameQuery;
 }
-const GameGrid = ({selectedGenre,selectedPlatform}:Props) => {
-    const{data,error,isLoading}=usegames(selectedGenre,selectedPlatform);
-    const Skeletons=[1,2,3,4,5,6]; 
-  
-    return (
+const GameGrid = ({ gameQuery }: Props) => {
+  const { data, error, isLoading } = usegames(gameQuery);
+  const Skeletons = [1, 2, 3, 4, 5, 6];
+
+  return (
     <>
-    {error && <Text>{error}</Text>}
-   <SimpleGrid columns={{sm:1,md:2,lg:3,xl:4}} padding='10px' spacing={3}>
-    {isLoading &&
-       Skeletons.map((Skeleton)=> <GameCardContainer key={Skeleton}><GameCardSkeleton /></GameCardContainer>)}
-    {data.map((game)=>
-        <GameCardContainer key={game.id}>
-          <GameCard  game={game}/>
-        </GameCardContainer>
-)}
-    </SimpleGrid>
+      {error && <Text>{error}</Text>}
+      <SimpleGrid
+        columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
+        padding="10px"
+        spacing={3}
+      >
+        {isLoading &&
+          Skeletons.map((Skeleton) => (
+            <GameCardContainer key={Skeleton}>
+              <GameCardSkeleton />
+            </GameCardContainer>
+          ))}
+        {data.map((game) => (
+          <GameCardContainer key={game.id}>
+            <GameCard game={game} />
+          </GameCardContainer>
+        ))}
+      </SimpleGrid>
     </>
-  )
-}
+  );
+};
 
-export default GameGrid
+export default GameGrid;
