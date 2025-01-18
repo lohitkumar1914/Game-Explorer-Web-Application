@@ -25,6 +25,7 @@ Game Hub is a web application designed for gaming enthusiasts to explore a wide 
 ## How to Run the Project Locally
 
 1. **Clone the Repository**:
+
    ```bash
    git clone https://github.com/your-username/game-hub.git
    cd game-hub
@@ -32,17 +33,20 @@ Game Hub is a web application designed for gaming enthusiasts to explore a wide 
 
 2. **Install Dependencies**:
    Make sure you have Node.js installed. Then run:
+
    ```bash
    npm install
    ```
 
 3. **Set Up Environment Variables**:
    Create a `.env` file in the root directory and add your API key for the RAWG API:
+
    ```env
    REACT_APP_RAWG_API_KEY=your_api_key_here
    ```
 
 4. **Start the Development Server**:
+
    ```bash
    npm start
    ```
