@@ -79,26 +79,6 @@ The project leverages the **RAWG.io API** for fetching game-related data. For mo
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! Follow these steps to contribute:
-
-1. Fork the repository.
-2. Create a new branch for your feature:
-   ```bash
-   git checkout -b feature-name
-   ```
-3. Commit your changes:
-   ```bash
-   git commit -m "Add feature description"
-   ```
-4. Push to your branch:
-   ```bash
-   git push origin feature-name
-   ```
-5. Open a pull request.
-
----
 
 ## 🛡️ License
 
