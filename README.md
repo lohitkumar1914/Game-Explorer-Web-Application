@@ -99,7 +99,7 @@ Feel free to reach out for any queries or feedback:
 
 - **Name**: Lohit Kumar (Naram)
 - **GitHub**: [lohitkumar1914](https://github.com/lohitkumar1914)
-- **Email**:lohitkumar1914@gmail.com(mailto:ohitkumar1914@gmail.com)  
+- **Email**:lohitkumar1914@gmail.com
 
 ---
 
